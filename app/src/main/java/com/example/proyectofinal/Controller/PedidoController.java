@@ -61,7 +61,7 @@ public class PedidoController {
         iniciarFirebase();
         long id= generarID();
         pedido.setId_Pedido(id);
-        databaseReference.child("alimentosyBebidas").child(Long.toString(pedido.getId_Pedido())).setValue(pedido);
+        databaseReference.child("Pedido").child(Long.toString(pedido.getId_Pedido())).setValue(pedido);
 
         //databaseReference.child("alimentosyBebidas").push().setValue(pedido);
         //databaseReference.child("alimentosyBebidas").removeValue();
@@ -86,7 +86,7 @@ public class PedidoController {
     }
     public void eliminarPedido(String id){
         iniciarFirebase();
-        databaseReference.child("alimentosyBebidas").child(id).removeValue();
+        databaseReference.child("Pedido").child(id).removeValue();
 
     }
 
