@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Pizzas</string>
+    <string name="num_mesa_pedido">Pedido de la mesa</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="nombre">Nombre</string>
+    <string name="nuevo_usuario_title">Nuevo Usuario</string>
+    <string name="registrar">Registrar</string>
+    <string name="longin_tilte">Pizzería X</string>
+    <string name="registrate">Regístrate</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="mesero">Mesero:</string>
+    <string name="select_mesa">Seleccione una mesa</string>
+    <string name="find_mesa">Buscar Una Mesa</string>
+    <string name="paquetes">Paquetes</string>
+    <string name="pizzas">Pizzas</string>
+    <string name="mesa">Mesa:</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="combos">Combos</string>
+    <string name="pedido">Pedido</string>
+    <string name="mesas">Mesas</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="sub_total">Sub-Total:</string>
+    <string name="cero_pesos">$0</string>
+    <string name="iva">IVA:</string>
+    <string name="servicio">Servicio:</string>
+    <string name="total">Total</string>
+    <string name="enviar_pedido">Enviar Pedido</string>
+    <string name="nuevo_pedido">Nuevo Pedido</string>
+    <string name="descripcion">Descripción</string>
+    <string name="calorias">100 Calorias</string>
+    <string name="precio_total">Precio Total</string>
+    <string name="pedido_detail">Añadir al Pedido</string>
+</resources>

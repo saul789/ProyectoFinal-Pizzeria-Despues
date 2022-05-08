@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "297887784793",
+    "project_id": "pizzabdprueba",
+    "storage_bucket": "pizzabdprueba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297887784793:android:64790748cda0b63cb3f648",
+        "android_client_info": {
+          "package_name": "Pizzeria.X"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297887784793-v2lpget6kf1dfhvkmrg9a9p1lbv4ac6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw9DupwHaRauLOMNQ4NKpid3MPpviEfDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297887784793-v2lpget6kf1dfhvkmrg9a9p1lbv4ac6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297887784793:android:722dfb2053c37abcb3f648",
+        "android_client_info": {
+          "package_name": "com.example.proyectofinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297887784793-v2lpget6kf1dfhvkmrg9a9p1lbv4ac6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDw9DupwHaRauLOMNQ4NKpid3MPpviEfDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297887784793-v2lpget6kf1dfhvkmrg9a9p1lbv4ac6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

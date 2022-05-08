@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_menus_btn"
+    android:layout_margin="8dp"
+    android:elevation="3dp">
+
+    <TextView
+        android:id="@+id/PrecioCombo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cero_pesos"
+        android:textColor="@color/midnight_blue"
+        android:textSize="@dimen/subtitle_dimen_menu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/addCbtn"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="@+id/PicCombo"
+        app:layout_constraintTop_toTopOf="@+id/addCbtn" />
+
+    <ImageView
+        android:id="@+id/PicCombo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/paquete_1"
+        tools:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/NombreCombo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/midnight_blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/PicCombo"
+        app:layout_constraintStart_toStartOf="@+id/PicCombo"
+        app:layout_constraintTop_toBottomOf="@+id/PicCombo" />
+
+    <ImageView
+        android:id="@+id/addCbtn"
+        android:layout_width="44dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/PicCombo"
+        app:layout_constraintTop_toBottomOf="@+id/NombreCombo"
+        app:srcCompat="@mipmap/mas" />
+</androidx.constraintlayout.widget.ConstraintLayout>

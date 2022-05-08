@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_de_fondo_login"
+    android:backgroundTint="@color/color_de_fondo_login"
+    tools:context=".Activity.InicioDeSesionActivity">
+
+    <EditText
+        android:id="@+id/TxtContraseña"
+        android:layout_width="317dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="9dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/TxtUsuario"
+        app:layout_constraintStart_toStartOf="@+id/TxtUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/TxtUsuario">
+
+    </EditText>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="315dp"
+        android:layout_height="233dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/longin_tilte"
+        android:textColor="@color/Naranja"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TxtUsuario"
+        android:layout_width="315dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="9dp"
+        android:hint="@string/user"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/registroBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrate"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/cafe_fuerte"
+        android:textSize="@dimen/subtitle_dimen_tex"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/TxtContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/TxtContraseña" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="209dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="88dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/cafe_bajito"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registroBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

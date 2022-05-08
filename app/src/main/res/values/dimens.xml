@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_registro">9dp</dimen>
+    <dimen name="subtitle_dimen_tex">16sp</dimen>
+    <dimen name="subtitle_dimen_mesas">20sp</dimen>
+    <dimen name="title_dimen_menu">20sp</dimen>
+    <dimen name="subtitle_dimen_menu">18sp</dimen>
+    <dimen name="bottom_bar_text_dimen">12sp</dimen>
+    <dimen name="title_dimen_comanda">20sp</dimen>
+    <dimen name="subtitle_dimen_comanda">18sp</dimen>
+    <dimen name="total_dimen_comanda">30sp</dimen>
+    <dimen name="total_dimen_detail">23sp</dimen>
+    <dimen name="title_dimen_detail">24sp</dimen>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RegistroActivity">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/nuevo_usuario_title"
+        android:textColor="@color/Naranja"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="240dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:srcCompat="@mipmap/usuario" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/nombre"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_dimen_tex"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/TxtNombreM"
+        android:layout_width="335dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="@dimen/padding_registro"
+        android:ems="10"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apellidos"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_dimen_tex"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/TxtNombreM" />
+
+    <EditText
+        android:id="@+id/TxtApellidosM"
+        android:layout_width="335dp"
+        android:layout_height="0dp"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="@dimen/padding_registro"
+        android:ems="10"
+        android:hint="@string/apellidos"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/TxtNombreM"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_dimen_tex"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/TxtApellidosM" />
+
+    <EditText
+        android:id="@+id/TxtUsuarioM"
+        android:layout_width="335dp"
+        android:layout_height="43dp"
+        android:drawableStart="@drawable/ic_user_r"
+        android:drawablePadding="@dimen/padding_registro"
+        android:ems="10"
+        android:hint="Nombre de usuario"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/TxtApellidosM"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitle_dimen_tex"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/TxtUsuarioM" />
+
+    <EditText
+        android:id="@+id/TxtContraseñaM"
+        android:layout_width="335dp"
+        android:layout_height="45dp"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="@dimen/padding_registro"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/TxtUsuarioM"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <Button
+        android:id="@+id/agregarMeseroBtn"
+        android:layout_width="225dp"
+        android:layout_height="42dp"
+        android:text="@string/registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtContraseñaM" />
+</androidx.constraintlayout.widget.ConstraintLayout>
