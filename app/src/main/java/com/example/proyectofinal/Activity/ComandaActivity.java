@@ -14,10 +14,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyectofinal.Adapter.ComandaAdapter;
+import com.example.proyectofinal.Controller.PedidoController;
 import com.example.proyectofinal.Helper.ManagementComanda;
 import com.example.proyectofinal.Helper.MeserosDB;
 import com.example.proyectofinal.Interface.ChangeNumberItemsListener;
+import com.example.proyectofinal.Models.Pedido;
+import com.example.proyectofinal.Models.Usuarios;
 import com.example.proyectofinal.R;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
+import java.util.UUID;
 
 public class ComandaActivity extends AppCompatActivity {
 private RecyclerView.Adapter adapter;
@@ -28,9 +37,12 @@ private double iva;
 private ScrollView scrollView;
     MeserosDB helper=new MeserosDB(this,"MeserosDB",null,1);
 
-
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
     String Nombre="";
     String password="";
+    TextView ivaPedido,ServicioPedido,PedidosubTotal,Pedidototal;
+    private long id;
 
 
     @Override
@@ -43,6 +55,13 @@ private ScrollView scrollView;
         initList();
         calcularPedido();
         bottomNavigation();
+        iniciarFirebase();
+        ivaPedido = findViewById(R.id.textIvaT);
+        PedidosubTotal = findViewById(R.id.textSubTotalT);
+        Pedidototal = findViewById(R.id.textTotalT);
+        ServicioPedido = findViewById(R.id.textServicioT);
+
+
     }
 
     private void CargarDatos() {
@@ -81,6 +100,7 @@ private ScrollView scrollView;
                 Intent intent= new Intent(ComandaActivity.this,MesasActivity.class);
 //                startActivity(new Intent(ComandaActivity.this,PedidoActivity.class));
                 intent.putExtras(bundle);
+                PedidoBD();
                 startActivity(intent);
                 finish();
             }
@@ -117,6 +137,7 @@ private ScrollView scrollView;
             @Override
             public void changed() {
                 calcularPedido();
+
             }
         });
         recyclerViewList.setAdapter(adapter);
@@ -127,6 +148,17 @@ private ScrollView scrollView;
             emptyTxt.setVisibility(View.GONE);
             scrollView.setVisibility(View.VISIBLE);
         }
+    }
+
+    private void PedidoBD() {
+
+                long id= generarID();
+                insertarPedido(String.valueOf(.getText()),
+                String.valueOf(ivaPedido.getContext()),
+                String.valueOf(NomMesa.getContext()),
+                String.valueOf(ServicioPedido.getContext()),
+                String.valueOf(PedidosubTotal.getContext()),
+                String.valueOf(Pedidototal.getContext()));
     }
 
     private void calcularPedido() {
@@ -140,8 +172,14 @@ private ScrollView scrollView;
         ivaTxt.setText("$"+iva);
         servicioTxt.setText("$"+servicio);
         totalTxt.setText("$"+total);
-    }
 
+    }
+    private void iniciarFirebase() {
+        FirebaseApp.initializeApp(this);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference= firebaseDatabase.getReference();
+
+    }
     private void initView() {
         subTotalTxt=findViewById(R.id.textSubTotalT);
         ivaTxt=findViewById(R.id.textIvaT);
@@ -153,5 +191,37 @@ private ScrollView scrollView;
         NomMesa=findViewById(R.id.comandaMesaTxt);
 
     }
+    public void insertarPedido(long id_Pedido,Double iva,int numeroMesa,Double Servicio, Double sub_Total, Double total){
 
+            Pedido p = new Pedido();
+            p.setId_Pedido(id_Pedido);
+            p.setIva(iva);
+            p.setNumeroMesa(numeroMesa);
+            p.setServicio(Servicio);
+            p.setSub_Total(sub_Total);
+            p.setTotal(total);
+            databaseReference.child("Pedido").child(String.valueOf(p.getId_Pedido())).setValue(p);
+
+
+
+            Toast.makeText(getApplicationContext(), "Pedido Guardado con Exito", Toast.LENGTH_LONG).show();
+//        ContentValues valores=new ContentValues();
+//        valores.put("Nombre",nom);
+//        valores.put("Apellidos",apellido);
+//        valores.put("Usuario",usuario);
+//        valores.put("Password",Password);
+//
+//        this.getWritableDatabase().insert("meseros",null,valores);
+    }
+
+    public Long generarID(){
+        int mes= Calendar.getInstance().get(Calendar.MONTH);
+        int hora=Calendar.getInstance().get(Calendar.HOUR);
+        int minuto=Calendar.getInstance().get(Calendar.MINUTE);
+        int segundo=Calendar.getInstance().get(Calendar.SECOND);
+        String id= ""+mes+""+hora+""+minuto+""+segundo;
+        return Long.parseLong(id);
+
+
+    }
 }

@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_comanda.xml" value="0.340625" />
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_inicio_de_sesion.xml" value="0.340625" />
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_menu_principal.xml" value="0.340625" />
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_mesas.xml" value="0.340625" />
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_pedido.xml" value="0.340625" />
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_registro.xml" value="0.340625" />
+        <entry key="..\:/Users/Baka/AndroidStudioProjects/ProyectoFinal-Pizzeria-Despues/app/src/main/res/layout/activity_show_detail.xml" value="0.340625" />
         <entry key="..\:/Users/Baka/AndroidStudioProjects/proyecto_final/app/src/main/res/layout/activity_comanda.xml" value="0.22745901639344263" />
         <entry key="..\:/Users/Baka/AndroidStudioProjects/proyecto_final/app/src/main/res/layout/activity_inicio_de_sesion.xml" value="0.22745901639344263" />
         <entry key="..\:/Users/Baka/AndroidStudioProjects/proyecto_final/app/src/main/res/layout/activity_menu_principal.xml" value="0.22745901639344263" />

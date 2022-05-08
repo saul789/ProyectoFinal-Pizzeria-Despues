@@ -21,6 +21,16 @@ public class Pedido {
         this.total=total;
     }
 
+    public Pedido() {
+        this.id_Pedido=id_Pedido;
+        this.numeroMesa=numeroMesa;
+        this.pedido=pedido;
+        this.sub_Total=sub_Total;
+        this.iva=iva;
+        this.servicio=servicio;
+        this.total=total;
+    }
+
 
     public long getId_Pedido() {
         return id_Pedido;
