@@ -27,6 +27,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     private  RecyclerView recyclerViewPaquetesList,recyclerViewPizzasList,recyclerViewBebidasList;
     private TextView NumMesa,NomMesero;
     MeserosDB helper=new MeserosDB(this,"MeserosDB",null,1);
+    String Nombre="";
+    String password="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             Intent intent= getIntent();
             Bundle datos= intent.getExtras();
             if(datos!=null){
-                String Nombre=datos.getString("nombreusuario");
+                Nombre=datos.getString("nombreusuario");
+                password=datos.getString("password");
                 NomMesero.setText(Nombre/*helper.GetNomMesero()*/);
                 NumMesa.setText(helper.GetNumMesa());
             }else{
@@ -84,7 +87,14 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    startActivity(new Intent(MenuPrincipalActivity.this,MesasActivity.class));
+                    Bundle bundle= new Bundle();
+                    bundle.putString("nombreusuario",Nombre);
+                    bundle.putString("password",password);
+                    Intent intent= new Intent(MenuPrincipalActivity.this,MesasActivity.class);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+
+
                     finish();
                 }catch (Exception e){
                     Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_LONG).show();
