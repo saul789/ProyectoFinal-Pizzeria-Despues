@@ -28,6 +28,11 @@ private double iva;
 private ScrollView scrollView;
     MeserosDB helper=new MeserosDB(this,"MeserosDB",null,1);
 
+
+    String Nombre="";
+    String password="";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +44,28 @@ private ScrollView scrollView;
         calcularPedido();
         bottomNavigation();
     }
+
+    private void CargarDatos() {
+
+
+        try{
+
+            Intent intent= getIntent();
+            Bundle datos= intent.getExtras();
+            if(datos!=null){
+                Nombre=datos.getString("nombreusuario");
+                password=datos.getString("password");
+            }else{
+                Toast.makeText(getApplicationContext(),"nulo",Toast.LENGTH_LONG).show();
+            }
+
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(),"cargardatos"+e.toString(),Toast.LENGTH_LONG).show();
+        }
+
+
+    }
     private void bottomNavigation() {
         LinearLayout pizzasBtn=findViewById(R.id.pizzasCbtn);
         LinearLayout  MesasBtn=findViewById(R.id.MesasCBtn);
@@ -47,8 +74,14 @@ private ScrollView scrollView;
         EnviarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle= new Bundle();
+                bundle.putString("nombreusuario",Nombre);
+                bundle.putString("password",password);
                 Toast.makeText(getApplicationContext(), "Pedido Enviado a Cocina", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(ComandaActivity.this,PedidoActivity.class));
+                Intent intent= new Intent(ComandaActivity.this,MesasActivity.class);
+//                startActivity(new Intent(ComandaActivity.this,PedidoActivity.class));
+                intent.putExtras(bundle);
+                startActivity(intent);
                 finish();
             }
         });
