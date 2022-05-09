@@ -114,6 +114,7 @@ private ScrollView scrollView;
                 intent.putExtras(bundle);
                 startActivity(intent);
                 finish();
+
             }
         });
         pizzasBtn.setOnClickListener(new View.OnClickListener() {
